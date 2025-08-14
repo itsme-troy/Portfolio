@@ -10,8 +10,6 @@ const ovo = Ovo({
 });
 
 
-
-
 export const metadata = {
   title: "Portfolio - Troy",
   description: "",
@@ -19,10 +17,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${outfit.className} ${ovo.className}
-        antialiased`}    
+    <html lang="en" className="scroll-smooth">
+      <body 
+      className={`${outfit.className} ${ovo.className} antialiased leading-8 overflow-x-hidden font-outfit`}   // leading-8 for increase line height  
       >
         {children}
       </body>

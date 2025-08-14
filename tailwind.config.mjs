@@ -17,6 +17,8 @@ export default {
       fontFamily: {
         Outfit: ["Outfit", "sans-serif"], 
         Ovo: ["Ovo", "Serif"]
+        // outfit: ["var(--font-outfit)"], 
+        // ovo: ["var(--font-ovo)"],
       }
     },
   },

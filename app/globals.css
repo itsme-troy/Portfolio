@@ -1,10 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "tailwindcss";
+@import "tailwindcss"; 
 
-
-*{
-    font-family: Outfit;
-    
+/* apply all outfit font in html elements */
+*{ 
+    font-family: Outfit;  
 }
