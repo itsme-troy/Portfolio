@@ -44,7 +44,7 @@ const Work = () => {
             py-3 px-10 mx-auto my-20 hover:bg-lightHover duration-500'> 
             Show more <Image src={assets.right_arrow_bold } alt='Right arrow'
                 className='w-4' />
-        
+            
         </a>
     </div>
   )
