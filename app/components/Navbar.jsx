@@ -31,6 +31,7 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
     </div>
 
     <nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${isScroll ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm" : ""}`}>
+        
         <a href="#top">
             <Image 
                 src={assets.logo} 
@@ -48,6 +49,7 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
         </ul>
 
         <div className='flex items-center gap-4'>
+            {/* flips isDarkMode */}
             <button onClick={()=> setIsDarkMode(prev => !prev)}>
                 {/* if  dark mode is true, display sun, else display moon*/}
                 <Image src={isDarkMode ? assets.sun_icon : assets.moon_icon} alt="" className='w-6 cursor-pointer'/>
