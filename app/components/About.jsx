@@ -96,7 +96,7 @@ const About = () => {
                         className='flex items-center gap-3 sm:gap-5'>
                             {toolsData.map((tool, index)=>(
                                 <motion.li 
-                                
+                                    whileHover= {{ scale: 1.1 }} // increase size slightly 
                                 
                                     className='flex items-center justify-center w-12 sm:w-14 
                                     aspect-square border border-gray-400 rounded-lg cursor-pointer
