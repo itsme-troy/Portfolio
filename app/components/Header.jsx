@@ -48,8 +48,6 @@ const Header = () => {
                     whileInView={{y: 0, opacity: 1}} // end on orig size
                     transition={{duration: 0.6, delay: 1}} 
                     
-                
-                
                 href="#contact"
                     className='px-10 py-3 border border-white rounded-full bg-black
                     text-white flex items-center gap-2'

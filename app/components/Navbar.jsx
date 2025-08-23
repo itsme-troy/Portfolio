@@ -22,7 +22,6 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
             }
         })
     })
-    
 
   return (
     <>
@@ -49,7 +48,7 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
         </ul>
 
         <div className='flex items-center gap-4'>
-            {/* flips isDarkMode */}
+            {/* flips isDarkMode || return opposite value */}
             <button onClick={()=> setIsDarkMode(prev => !prev)}>
                 {/* if  dark mode is true, display sun, else display moon*/}
                 <Image src={isDarkMode ? assets.sun_icon : assets.moon_icon} alt="" className='w-6 cursor-pointer'/>
