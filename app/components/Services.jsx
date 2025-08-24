@@ -44,14 +44,14 @@ const Services = ({isDarkMode}) => {
 
                     className='border border-gray-400 rounded-lg px-8 py-12
                      hover:shadow-black cursor-pointer hover:bg-lightHover 
-                     hover:-translate-y-1 duration-500 dark:bg-darkHover dark:hover:shadow-white'>
+                     hover:-translate-y-1 duration-500 dark:bg-darkHover dark:hover:shadow-white group'>
                     <Image src={icon} alt='' className='w-10' />
-                    <h3 className='text-lg my-4 text-gray-700 dark:text-white'>{title}</h3>
-                    <p className='text-sm text-gray-600 leading-5 dark:text-white'> 
+                    <h3 className='text-lg my-4 text-gray-700 dark:text-white group-hover:text-black'>{title}</h3>
+                    <p className='text-sm text-gray-600 leading-5 dark:text-white group-hover:text-black'> 
                         {description}
                     </p>
-                    <a href={link} className='flex items-center gap-2 text-sm mt-5'>
-                        Read more <Image alt='' src={isDarkMode ? assets.right_arrow_white : assets.right_arrow} className='w-4'/>
+                    <a href={link} className='flex items-center gap-2 text-sm mt-5 group-hover:text-black'>
+                        Read more <Image alt='' src={assets.right_arrow} className='w-4 hidden dark:block group-hover:block'/>
                     </a>
                </motion.div> 
             ))}

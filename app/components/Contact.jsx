@@ -32,7 +32,7 @@ const Contact = () => {
 
   return (
     <motion.div id='contact' className='w-full px-[12%] py-10 scroll-mt-20 bg-[url("/
-        footer-bg-color.png")] bg-no-repeat bg-center bg-[length:90%_auto]'
+        footer-bg-color.png")] bg-no-repeat bg-center bg-[length:90%_auto] dark:bg-none'
         
         initial={{scale: 0}} // start as nothing 
         whileInView={{scale: 1}} // end on orig size
@@ -75,7 +75,7 @@ const Contact = () => {
                     
                     type="text" placeholder='Enter your name' required 
                     className='flex-1 p-3 outline-none border-[0.5px] border-gray-400 
-                        rounded-md bg-white' name='name'/> 
+                        rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90' name='name'/> 
 
                 <motion.input 
                     initial={{ x: 50, opacity: 0}} // start as nothing 
@@ -84,8 +84,8 @@ const Contact = () => {
                     
                     type='email' placeholder='Enter your email' required
                     className='flex-1 p-3 outline-none border-[0.5px] border-gray-400 
-                        rounded-md bg-white' name='email'/> 
-            </motion.div>
+                        rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90' name='email'/> 
+                </motion.div>
             
             <motion.textarea 
                 initial={{ y: 100, opacity: 0}} // start as nothing 
@@ -94,7 +94,8 @@ const Contact = () => {
                 
                 rows='6' placeholder="Enter your message" required 
                 className='w-full p-4 outline-none border-[0.5px] border-gray-400 
-                    rounded-md bg-white mb-6' name='message' ></motion.textarea>
+                    rounded-md bg-white mb-6 dark:bg-darkHover/30 dark:border-white/90' 
+                    name='message' ></motion.textarea>
            
            <motion.button 
                 whileHover={{ scale: 1.05}} // start as nothing 
@@ -102,7 +103,8 @@ const Contact = () => {
         
                 type='submit'
                 className='py-3 px-8 w-max flex items-center justify-between gap-2
-                bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500'
+                bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500
+                dark:bg-transparent dark:border-[0.5px] dark:hover:bg-darkHover'
             > Submit now <Image src={assets.right_arrow_white} alt='' className='w-4' /> </motion.button>
 
         <p className='mt-4'>{result}</p>        
