@@ -2,7 +2,10 @@ import { assets, infoList, toolsData } from '@/assets/assets'
 import Image from 'next/image'
 import React from 'react'
 import {motion} from "motion/react" 
-const About = () => {
+
+
+const About = ({isDarkMode}) => {
+
   return (
     <motion.div id='about' className='w-full px-[12%] py-10 scroll-mt-20' 
         initial={{ opacity: 0}}
@@ -72,11 +75,12 @@ const About = () => {
                                     
                                     className='border-[0.5px] border-gray-400 rounded-xl
                                         p-6 cursor-pointer hover:bg-lightHover 
-                                        hover:-translate-y-1 duration-500'
+                                        hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white
+                                        dark:hover:shadow-white dark:hover:bg-darkHover/50'
                                         key={index}>
-                                        <Image src={icon} alt={title} className='w-7 mt-3' />
-                                        <h3 className='my-4 font-semibold text-gray-700'>{title}</h3>
-                                        <p className='text-gray-600 text-sm'>{description}</p>
+                                        <Image src={isDarkMode ? iconDark : icon} alt={title} className='w-7 mt-3' />
+                                        <h3 className='my-4 font-semibold text-gray-700 dark:text-white'>{title}</h3>
+                                        <p className='text-gray-600 text-sm dark:text-white/80'>{description}</p>
                                 </motion.li>
                             ))}
                         </motion.ul>
@@ -86,7 +90,7 @@ const About = () => {
                             whileInView={{ y:0, opacity: 1}}
                             transition={{delay: 1.3, delay: 0.5}} 
                         
-                        className='my-6 text-gray-700 font-Ovo'> Tools i use </motion.h4>
+                        className='my-6 text-gray-700 font-Ovo dark:text-white/80'> Tools i use </motion.h4>
                         <motion.ul  
                             initial={{ opacity: 0}}
                             whileInView={{ opacity: 1}}

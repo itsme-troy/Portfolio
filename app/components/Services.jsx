@@ -3,7 +3,7 @@ import React from 'react'
 import Image from 'next/image'
 import { motion } from "motion/react"
 
-const Services = () => {
+const Services = ({isDarkMode}) => {
   return (
     <motion.div id="services" className='w-full px-[12%] py-10 scroll-mt-20'
         initial={{ opacity: 0}}
@@ -44,14 +44,14 @@ const Services = () => {
 
                     className='border border-gray-400 rounded-lg px-8 py-12
                      hover:shadow-black cursor-pointer hover:bg-lightHover 
-                     hover:-translate-y-1 duration-500'>
+                     hover:-translate-y-1 duration-500 dark:bg-darkHover dark:hover:shadow-white'>
                     <Image src={icon} alt='' className='w-10' />
-                    <h3 className='text-lg my-4 text-gray-700'>{title}</h3>
-                    <p className='text-sm text-gray-600 leading-5'> 
+                    <h3 className='text-lg my-4 text-gray-700 dark:text-white'>{title}</h3>
+                    <p className='text-sm text-gray-600 leading-5 dark:text-white'> 
                         {description}
                     </p>
                     <a href={link} className='flex items-center gap-2 text-sm mt-5'>
-                        Read more <Image alt='' src={assets.right_arrow} className='w-4'/>
+                        Read more <Image alt='' src={isDarkMode ? assets.right_arrow_white : assets.right_arrow} className='w-4'/>
                     </a>
                </motion.div> 
             ))}
