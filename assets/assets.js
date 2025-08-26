@@ -100,14 +100,42 @@ export const workData = [
 ]
 
 export const serviceData = [
-    { icon: assets.web_icon, title: 'Web design', description: 'Web development is the process of building, programming...', link: '' },
-    { icon: assets.mobile_icon, title: 'Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
-    { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
-    { icon: assets.graphics_icon, title: 'Graphics design', description: 'Creative design solutions to enhance visual communication...', link: '' },
-]
+    { 
+        icon: assets.web_icon,
+        title: 'Web design', 
+        description: 'Web development is the process of building, programming...', 
+        details: 
+            'I build responsive, accessible websites using Next.js/React and Tailwind. Typical scope: landing pages, dashboards, admin panels, SEO-friendly pages, and image optimization.'
+    },
+    
+    { 
+        icon: assets.mobile_icon, 
+        title: 'Mobile app', 
+        description: 'Mobile app development involves creating software for mobile devices...', 
+        details: 
+             'I create cross-platform apps (React Native/Expo) with auth, push notifications, API integration, and offline storage.'
+    },
+
+    { 
+        icon: assets.ui_icon, 
+        title: 'UI/UX design', 
+        description: 'UI/UX design focuses on creating a seamless user experience...', 
+        details: 
+            'From wireframes to hi-fi prototypes in Figma. I design component libraries, flows, and handoff specs developers love.', 
+    },
+
+    {   
+        icon: assets.graphics_icon, 
+        title: 'Graphics design', 
+        description: 'Creative design solutions to enhance visual communication...',
+        details: 
+            'Logos, social banners, presentation decks, and brand kits. I keep assets consistent and export-ready.'
+    }
+
+    ]
 
 export const infoList = [
-    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'HTML, CSS, JavaScript React Js, Next Js' },
+    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'HTML, CSS, JavaScript, Python, Ruby, React, NextJs' },
     { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'BS Information Technology' },
     { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 3 projects' }
 ];

@@ -1,9 +1,15 @@
 import { assets, serviceData } from '@/assets/assets'
-import React from 'react'
+import React, {useState} from 'react'
 import Image from 'next/image'
 import { motion } from "motion/react"
 
-const Services = ({isDarkMode}) => {
+const Services = () => {
+  const [expandedIndex, setExpandedIndex] = useState(null)
+
+  const toggle = (i) => {
+    setExpandedIndex(expandedIndex === i ? null : i)
+  }
+
   return (
     <motion.div id="services" className='w-full px-[12%] py-10 scroll-mt-20'
         initial={{ opacity: 0}}
@@ -37,22 +43,54 @@ const Services = ({isDarkMode}) => {
             whileInView= {{ opacity: 1}}
             transition={{ delay: 0.9, duration: 0.6}}>
             
-            {serviceData.map(({icon, title, description, link}, index)=>(
+            {serviceData.map(({icon, title, description, details}, i)=>(
                
-               <motion.div key={index}
+               <motion.div key={i}
                     whileHover={{scale: 1.05}}
 
                     className='border border-gray-400 rounded-lg px-8 py-12
                      hover:shadow-black cursor-pointer hover:bg-lightHover 
                      hover:-translate-y-1 duration-500 dark:bg-darkHover dark:hover:shadow-white group'>
+                    
                     <Image src={icon} alt='' className='w-10' />
                     <h3 className='text-lg my-4 text-gray-700 dark:text-white group-hover:text-black'>{title}</h3>
                     <p className='text-sm text-gray-600 leading-5 dark:text-white group-hover:text-black'> 
-                        {description}
-                    </p>
-                    <a href={link} className='flex items-center gap-2 text-sm mt-5 group-hover:text-black'>
+                        {description} </p>
+
+                    {/* collpsed content */}
+
+                    <div
+                        className={`overflow-hidden transition-[max-height,opacity] duration-300 ease-out
+                        ${expandedIndex === i ? 'max-h-96 opacity-100 mt-3' : 'max-h-0 opacity-0'}`}
+                            id={`svc-details-${i}`}
+                            >
+
+                               <p className="text-sm text-gray-600 dark:text-gray-200">
+                            {details ?? 'More info coming soon…'} </p>
+                    </div>
+                        
+                        {/* toggle lives OUTSIDE so it's always visible */}
+                    <div className='mt-5 flex items-center gap-2'>
+                        <button 
+                            onClick={() => toggle(i)}
+                                className='text-sm underline-offset-2 hover:underline'
+                                aria-expanded={expandedIndex === i}
+                                aria-controls={`svc-details-${i}`}
+                            >
+                                {expandedIndex === i ? 'See less' : 'Read more'}
+                        </button>
+                            
+                            {/* Optional arrow that flips on expand */}
+                        <Image 
+                            src = {assets.right_arrow }
+                            alt = "arrow"
+                            className={`w-4 transition-transform ${expandedIndex === i ? 'rotate-90' : '' }`}/>
+                    </div>
+
+
+                    {/* <a href={link} className='flex items-center gap-2 text-sm mt-5 group-hover:text-black'>
                         Read more <Image alt='' src={assets.right_arrow} className='w-4 hidden dark:block group-hover:block'/>
-                    </a>
+                    </a> */}
                </motion.div> 
             ))}
 
