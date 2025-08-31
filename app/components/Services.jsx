@@ -65,7 +65,8 @@ const Services = () => {
                             id={`svc-details-${i}`}
                             >
 
-                               <p className="text-sm text-gray-600 dark:text-gray-200">
+                               <p className="text-sm text-gray-600 dark:text-gray-200 group-hover:text-black 
+                                dark-group-hover:text-black">
                             {details ?? 'More info coming soon…'} </p>
                     </div>
                         
@@ -73,7 +74,7 @@ const Services = () => {
                     <div className='mt-5 flex items-center gap-2'>
                         <button 
                             onClick={() => toggle(i)}
-                                className='text-sm underline-offset-2 hover:underline'
+                                className='text-sm underline-offset-2 hover:underline group-hover:text-black'
                                 aria-expanded={expandedIndex === i}
                                 aria-controls={`svc-details-${i}`}
                             >

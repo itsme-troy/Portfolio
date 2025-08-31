@@ -102,34 +102,35 @@ export const workData = [
 export const serviceData = [
     { 
         icon: assets.web_icon,
-        title: 'Web design', 
-        description: 'Web development is the process of building, programming...', 
+        title: 'Web Design', 
+        description: 'Designing and building responsive, user-friendly websites that align with brand identity and business goals.', 
         details: 
-            'I build responsive, accessible websites using Next.js/React and Tailwind. Typical scope: landing pages, dashboards, admin panels, SEO-friendly pages, and image optimization.'
+            'I develop modern, accessible websites using Next.js, React, and Tailwind CSS. Projects include landing pages, dashboards, and admin panels with SEO optimization and performance best practices'
     },
     
     { 
         icon: assets.mobile_icon, 
-        title: 'Mobile app', 
-        description: 'Mobile app development involves creating software for mobile devices...', 
+        title: 'Mobile app Development', 
+        description: 'Creating mobile applications that deliver seamless experiences on iOS and Android devices', 
         details: 
-             'I create cross-platform apps (React Native/Expo) with auth, push notifications, API integration, and offline storage.'
+             'I build cross-platform apps using React Native/Expo, featuring authentication, push notifications, API integration, and smooth performance optimized for mobile users.'
     },
 
     { 
         icon: assets.ui_icon, 
         title: 'UI/UX design', 
-        description: 'UI/UX design focuses on creating a seamless user experience...', 
+        description: 'Designing clean, intuitive, and visually appealing digital interfaces that enhance user satisfaction.', 
         details: 
-            'From wireframes to hi-fi prototypes in Figma. I design component libraries, flows, and handoff specs developers love.', 
+            'I create wireframes, prototypes, and design systems in Figma. My process focuses on user flows, accessibility, and handoff specifications that developers can easily implement for consistent user experiences.' 
     },
 
     {   
         icon: assets.graphics_icon, 
         title: 'Graphics design', 
-        description: 'Creative design solutions to enhance visual communication...',
+        description: 
+            'Crafting compelling visuals that communicate ideas effectively and strengthen brand identity.',
         details: 
-            'Logos, social banners, presentation decks, and brand kits. I keep assets consistent and export-ready.'
+            'I design logos, social media graphics, marketing materials, and brand kits. My approach ensures visual consistency across platforms while keeping designs professional, modern, and export-ready for both print and digital.'
     }
 
     ]
